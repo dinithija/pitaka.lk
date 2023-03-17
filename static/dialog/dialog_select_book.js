@@ -27,11 +27,11 @@ var dialogBookSelectHtml = '\
     <div class="title"><i class="fa fa-book fa-lg"></i> සෙවීම සීමා කරන්න</div>\
     <p>මෙම තෝරන ලද පොත් වලට පමණක් සෙවීම සීමා වේ. Use this to filter the search results by books.</p>\
     <select id="optgroup" multiple="multiple" class="books-select"></select>\
-    <p>පොතක් තේරීමට හෝ තෝරාගන්නා ලද පොතක් ඉවත් කිරීමට ඒ මත click කරන්න.</p>\
+    <p>පොතක් තේරීමට හෝ තෝරාගන්නා ලද පොතක් ඉවත් කිරීමට ඒ මත ඔබන්න.</p>\
     </div>\
     <div style="text-align: center">\
-    <a class="button update-button" onclick="updateSelectedBooks()"><i class="fa fa-check fa-fw"></i>Save</a>\
-    <a class="button close-button" onclick="closeDialog()"><i class="fa fa-times fa-fw"></i>Cancel</a>\
+    <a class="button update-button" onclick="updateSelectedBooks()"><i class="fa fa-check fa-fw"></i>සුරකින්න</a>\
+    <a class="button close-button" onclick="closeDialog()"><i class="fa fa-times fa-fw"></i>අවලංගු</a>\
     </div>\
     </div>';
 
