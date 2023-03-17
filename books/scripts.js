@@ -21,16 +21,16 @@ var linkType = {
 };
 
 var linkDesc = [
-    ['fa-file-pdf-o', 'PDF', 'PDF file එක භාගත කරගන්න'],
-    ['fa-chrome', 'WEB', 'HTML file එක වෙත පිවිසෙන්න'],
-    ['fa-folder-o', 'ගොනුව', 'ගොනුව වෙත පිවිසෙන්න'],
-    ['fa-file-zip-o', 'ZIP', 'ZIP file එක භාගත කරගන්න'],
-    ['fa-folder-o', 'ගොනුව', 'ගොනුව වෙත පිවිසෙන්න'],
-    ['fa-android', 'APP', 'android මෘදුකාංගය ලබාගන්න'],
-    ['fa-file-word-o', 'DOC', 'Word file එක භාගත කරගන්න'],
-    ['fa-file-excel-o', 'EXCEL', 'Excel වගුව භාගත කරගන්න'],
-    ['fa-file-image-o', 'IMAGE', 'පින්තූරය භාගත කරගන්න'],
-    ['fa-file-text-o', 'TXT', 'TEXT file එක වෙත පිවිසෙන්න'],
+    ['fa-file-pdf-o', 'PDF', 'පීඩීඑෆ් ගොනුව බාගන්න'],
+    ['fa-chrome', 'WEB', 'HTML ගොනුව බලන්න'],
+    ['fa-folder-o', 'ගොනුව', 'බහාලුම අරින්න'],
+    ['fa-file-zip-o', 'ZIP', 'ZIP ගොනුව බාගන්න'],
+    ['fa-folder-o', 'ගොනුව', 'බහාලුම අරින්න'],
+    ['fa-android', 'APP', 'ඇන්ඩ්‍රොයිඩ් යෙදුම ගන්න'],
+    ['fa-file-word-o', 'DOC', 'වර්ඩ් ගොනුව බාගන්න'],
+    ['fa-file-excel-o', 'EXCEL', 'එක්සෙල් වගුව බාගන්න'],
+    ['fa-file-image-o', 'IMAGE', 'රූපය බාගන්න'],
+    ['fa-file-text-o', 'TXT', 'පෙළ ගොනුව බලන්න'],
 ];
 
 function extToLinkType(extType) {
