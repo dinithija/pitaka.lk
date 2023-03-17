@@ -53,7 +53,7 @@ function getUrlData(name, version) {
         dataLoadComplete(name, version);
         setLocalData(name, version); // only called when loaded from url
     }).fail(function(name) {
-        $('#search-status').text(setting.desc + ' ශබ්දකෝෂය ලබා ගැනීමට නොහැකි වුනා. ඔබේ අන්තර්ජාල සම්බන්ධතාව පරික්ෂා කරන්න.');
+        $('#search-status').text(setting.desc + ' ශබ්දකෝෂය ලබා ගැනීමට නොහැකි විය. ඔබගේ අන්තර්ජාල සම්බන්ධතාව පරීක්‍ෂා කරන්න.');
     });
 }
 
@@ -132,7 +132,7 @@ function dataLoadComplete(name, version) {
 		}
 	}
 
-    $('#search-status > [dict="' + name + '"]').text('වචන ' + setting.data.length + ' කින් සමන්විත ' + setting.desc + ' සෙවීමට උඩ කොටුවේ type කරන්න.');
+    $('#search-status > [dict="' + name + '"]').text('වචන ' + setting.data.length + ' කින් සමන්විත ' + setting.desc + ' සෙවීමට උඩ කොටුවේ ලියන්න.');
     if (!eventsRegistered) {
         $('.search-bar').on('keyup compositionend', function(e) {
             performSearch(e, SearchType.PALI);
@@ -160,7 +160,7 @@ function performSearch(e, searchType) {
     ul.empty().hide();
     searchPrevQuery = queryT;
     if(query.length < resultSettings.minQueryLength) {
-        statusDiv.text("අඩුම තරමේ අකුරු " + resultSettings.minQueryLength + " ක් වත් ඇතුළු කරන්න.");
+        statusDiv.text("අවම වශයෙන් අකුරු " + resultSettings.minQueryLength + " ක් ඇතුල් කරන්න.");
         return;
     }
     
@@ -233,9 +233,9 @@ function performSearch(e, searchType) {
     });
     ul.slideDown('fast');
     if (entries.length < resultSettings.maxResults) {
-        statusDiv.text("“" + query + "” සෙවුම සඳහා වචන " + entries.length + " ක් හමුවුනා.");
+        statusDiv.text("“" + query + "” සෙවුම සඳහා වචන " + entries.length + " ක් හමුවිය.");
     } else {
-        statusDiv.text("සෙවුම සඳහා වචන " + hits + " කට වඩා හමුවුනා. එයින් මුල් වචන " + resultSettings.maxResults + " පහත දැක්වේ.");
+        statusDiv.text("සෙවුම සඳහා වචන " + hits + " කට වඩා හමුවිය. එයින් මුල් වචන " + resultSettings.maxResults + " පහත දැක්වේ.");
     }
 }
 
