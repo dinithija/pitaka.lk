@@ -60,7 +60,7 @@ function performSearch(e) {
     var table = $('#search-results'), statusDiv = $('#search-status');
     table.hide().find('.result').remove();
     if (query.length < resultSettings.minQueryLength) {
-        statusDiv.text("අඩුම තරමේ අකුරු " + resultSettings.minQueryLength + " ක් වත් ඇතුළු කරන්න.");
+        statusDiv.text("අවම වශයෙන් අකුරු " + resultSettings.minQueryLength + " ක් ඇතුල් කරන්න.");
         return;
     }
     console.log(query);
@@ -97,9 +97,9 @@ function displayResults(query, results) {
     });
     table.slideDown('fast');
     if (results.length < resultSettings.maxResults) {
-        statusDiv.text("“" + query + "” යන සෙවුම සඳහා ගැළපෙන පොත් " + results.length + " ක් හමුවුනා.");
+        statusDiv.text("“" + query + "” යන සෙවුම සඳහා ගැළපෙන පොත් " + results.length + " ක් හමුවිය.");
     } else {
-        statusDiv.text("ඔබගේ සෙවුම සඳහා ගැළපෙන පොත් " + results.length + " කට වඩා හමුවුනා. එයින් මුල් පොත් " + resultSettings.maxResults + " පහත දැක්වේ.");
+        statusDiv.text("ඔබගේ සෙවුම සඳහා ගැළපෙන පොත් " + results.length + " කට වඩා හමුවිය. එයින් මුල් පොත් " + resultSettings.maxResults + " පහත දැක්වේ.");
     }
 }
 
@@ -139,7 +139,7 @@ function searchDataSet(query) {
 
 function createLinkButton(info) {
     var linkD = linkDesc[info[1]];
-    var sizeText = info[1] != linkType.COLL ? (info[2] < 1024 ? info[2] + ' MB' : (info[2] / 1024).toFixed(1) + ' GB') : '';
+    var sizeText = info[1] != linkType.COLL ? (info[2] < 1024 ? info[2] + ' මෙ.බ.' : (info[2] / 1024).toFixed(1) + ' ගි.බ.') : '';
     var link = $('<a/>').addClass('button').attr('tip', linkD[2]).attr('href', info[0]).attr('type', info[1])
         .append($('<i/>').addClass('fa ' + linkD[0]), $('<span/>').text(' ' + linkD[1] + ' ' + sizeText));
     return link;
@@ -159,7 +159,7 @@ var maxBooksPerRow = {
 var bookColors = ['bisque', 'DarkKhaki', 'DarkSalmon', 'darkorange', 'gold', 'lightblue', 'LavenderBlush', 'lightgreen'];
 
 var typedBookDesc = "යතුරුලියනය කරන ලද ප්‍රමාණයෙන් කුඩා ඉතා පැහැදිලි";
-var scannedBookDesc = "ස්කෑන් කර සකසන ලද පොතකි";
+var scannedBookDesc = "පරිලෝකිත පොතකි";
 
 function addGroup(groupInd, group) {
     var groupHeader = $('<div/>').addClass('group-header').text(group.name).attr('id', group.anchor);
@@ -243,12 +243,12 @@ var groups = [
         books: [
             {
                 name: "බුද්ධ ජයන්ති ත්‍රිපිටකය",
-                desc: "පාළි සහ සිංහල පරිවර්තනය PDF පොත් 58",
+                desc: "පාළි සහ සිංහල පරිවර්තනය පීඩීඑෆ් පොත් 58",
                 urls: [["http://www.mediafire.com/folder/oo8eet91ax8py/බුද්ධ_ජයන්ති_ත්‍රිපිටකය", linkType.FOLDER, 5939]],
             },
             {
                 name: "සරළ සිංහල ත්‍රිපිටක පරිවර්තනය",
-                desc: "ඒ. පී. සොයිසා පරිවර්තනය PDF පොත් 38",
+                desc: "ඒ. පී. සොයිසා පරිවර්තනය පීඩීඑෆ් පොත් 38",
                 urls: [["http://www.mediafire.com/file/q6mcjc8jpo1dp8o/APZoysa_Tripitakaya.zip", linkType.ZIP, 60]],
             },
             {
@@ -258,7 +258,7 @@ var groups = [
             },
             {
                 name: "පාළි අටුවා පොත්",
-                desc: "හේවාවිතාරණ මුද්‍රණය PDF පොත් 49",
+                desc: "හේවාවිතාරණ මුද්‍රණය පීඩීඑෆ් පොත් 49",
                 urls: [["https://www.mediafire.com/folder/31bz1yz9la6m9/", linkType.FOLDER, 3400]],
             },
             {
@@ -295,13 +295,13 @@ var groups = [
             },
             {
                 name: "පන්සිය පනස් ජාතකය - පොත් දෙකකි",
-                desc: "පොත් දෙකම භාගත කරගන්න.",
+                desc: "පොත් දෙකම බාගන්න.",
                 urls: [["http://www.mediafire.com/file/cdt3ch4fkdbgro6/SR051_Pansiya_Panas_Jathakaya_1.pdf", linkType.PDF, 118],
                     ["http://www.mediafire.com/file/9m3t8d4l37sptpl/SR052_Pansiya_Panas_Jathakaya_2.pdf", linkType.PDF, 120]],
             },
             {
                 name: "අභිධර්මාර්ථ ප්‍රදීපිකා 1-4",
-                desc: "පොත් සතරම භාගත කරගන්න.",
+                desc: "පොත් සතරම බාගන්න.",
                 urls: [["http://www.mediafire.com/file/ldxjd8khuwpce6t", linkType.PDF, 29],
                     ["http://www.mediafire.com/file/81az86fut6teh6f", linkType.PDF, 35],
                     ["http://www.mediafire.com/file/sd8izxwh8zb293x", linkType.PDF, 30],
@@ -472,7 +472,7 @@ var groups = [
 			/*{
                 name: "දුර්ලභ ඉපැරණි පොත් සමුහය",
                 css: { "font-size": "16px" },
-                desc: "නාඋයන ආරණ්‍යයෙන් ස්කෑන් කර සකසන ලද පොත් 150 ක්",
+                desc: "නාඋයන ආරණ්‍යයෙන් පරිලෝකිත පොත් 150 ක්",
                 urls: [["http://www.mediafire.com/folder/f7yy971gjkeak/Nauyana_Books", linkType.FOLDER, 10000]],
             },*/
             {
@@ -532,7 +532,7 @@ var groups = [
             {
                 name: "පාලිභාෂාවතරණය 1-3",
                 css: { "font-size": "18px" },
-                desc: "පොත් තුනම භාගත කරගන්න",
+                desc: "පොත් තුනම බාගන්න",
                 author: "පොල්වත්තේ බුද්ධදත්ත හිමි",
                 urls: [["http://www.mediafire.com/file/md9hgduvqr5dctp/Palibhashavatharanaya_1.pdf", linkType.PDF, 2],
                     ["http://www.mediafire.com/file/e0mfud2xa2v1xd5/Palibhashavatharanaya_2.pdf", linkType.PDF, 2],
