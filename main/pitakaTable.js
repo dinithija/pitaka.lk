@@ -20,7 +20,7 @@ $.fn.registerTextClicks = function() {
         if (paraId) {
             url += ('&p=' + paraId);
         }
-        copyTextAndShowToast(url, 'link එක copy කර ගත්තා. ඔබට අවශ්‍ය තැන paste කරන්න.');
+        copyTextAndShowToast(url, 'සබැඳිය පිටපත් විය. ඔබට අවශ්‍ය තැනක අලවන්න.');
         e.stopPropagation();
     });*/
     const clipb = new ClipboardJS('i.share-icon', {
@@ -34,7 +34,7 @@ $.fn.registerTextClicks = function() {
             return url;
         }
     });
-    clipb.on('success', function(e) { showToast('link එක copy කර ගත්තා. ඔබට අවශ්‍ය තැන paste කරන්න.'); });
+    clipb.on('success', function(e) { showToast('සබැඳිය පිටපත් විය. ඔබට අවශ්‍ය තැනක අලවන්න.'); });
 }
 
 
@@ -118,7 +118,7 @@ function hideAllSubheads(tbody) {
 }
 
 function setLoadingError(xhr, targetUrl) {
-    var msg = "සූත්‍ර දේශනාව ලබා ගැනීමේදී දෝෂයක් සිදුවූ බව කණගාටුවෙන් දැනුම් දෙමු . : ";
+    var msg = "කණගාටුයි, සූත්‍ර දේශනාව ලබා ගැනීමේදී දෝෂයක් සිදු විය. : ";
     alert( msg + xhr.status + " " + xhr.statusText + ". Url: " + targetUrl);
 }
 
