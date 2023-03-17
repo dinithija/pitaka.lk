@@ -40,7 +40,7 @@ function initSearchBar() {
 }
 function updateFilterStatusDisplay() {
     if (curSearchBooks.length < resultSettings.fullSearchBooksLength) {
-        $('#search-filter-status').html("සෙවුම පොත් " + curSearchBooks.length + " කට සීමා වී ඇත. වෙනස් කිරීමට <i class='fa fa-wrench fa-fw'></i> මත click කරන්න.");
+        $('#search-filter-status').html("සෙවුම පොත් " + curSearchBooks.length + " කට සීමා වී ඇත. වෙනස් කිරීමට <i class='fa fa-wrench fa-fw'></i> මත ඔබන්න.");
     } else {
         $('#search-filter-status').text('');
     }
@@ -61,7 +61,7 @@ function performSearch(e) {
     table.hide().find('.result').remove();
     searchPrevQuery = query;
     if (query.length < resultSettings.minQueryLength) {
-        statusDiv.text("අඩුම තරමේ අකුරු " + resultSettings.minQueryLength + " ක් වත් ඇතුළු කරන්න.");
+        statusDiv.text("අවම වශයෙන් අකුරු " + resultSettings.minQueryLength + " ක් ඇතුල් කරන්න.");
         return;
     }
     console.log(query);
@@ -101,9 +101,9 @@ function displaySearchResults() {
     });
     table.slideDown('fast');
     if (entries.length < resultSettings.maxResults) {
-        statusDiv.text("“" + currentSearch.query + "” යන සෙවුම සඳහා ගැළපෙන වචන " + entries.length + " ක් හමුවුනා.");
+        statusDiv.text("“" + currentSearch.query + "” යන සෙවුම සඳහා ගැළපෙන වචන " + entries.length + " ක් හමුවිය.");
     } else {
-        statusDiv.text("ඔබගේ සෙවුම සඳහා ගැළපෙන වචන " + entries.length + " කට වඩා හමුවුනා. එයින් මුල් වචන " + resultSettings.maxResults + " පහත දැක්වේ.");
+        statusDiv.text("ඔබගේ සෙවුම සඳහා ගැළපෙන වචන " + entries.length + " කට වඩා හමුවිය. එයින් මුල් වචන " + resultSettings.maxResults + " පහත දැක්වේ.");
     }
 }
 
@@ -252,7 +252,7 @@ function displayBookmarks() {
         statusDiv.text("ඔබ එකදු සූත්‍රයක් වත් තරු යොදා නැත. පිටුසන් තැබීම සඳහා සූත්‍රය නම අසල ඇති තරු ලකුණ ඔබන්න.");
         return;
     }
-    statusDiv.text("ඔබ විසින් තරුයෙදූ සූත්‍ර " + bookmarks.length + " ක් හමුවුනා.");
+    statusDiv.text("ඔබ විසින් තරුයෙදූ සූත්‍ර " + bookmarks.length + " ක් හමුවිය.");
     /*entries = _.map(bookmarks, function(nodeId) {
         var info = searchIndex[nodeId];
         return {
